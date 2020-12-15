@@ -11,7 +11,7 @@ void runTimeFunc1()
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(chrono::high_resolution_clock::now() - start).count();
 	double new_time_taken = (time_taken * 1e-9);
-	ofstream myfile("Measure.txt"); // The name of the file
+	ofstream myfile("Measure.txt",ios_base::app); // The name of the file
 	myfile << "Time taken by function multiply is : " << fixed << new_time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
@@ -27,7 +27,7 @@ void runTimeFunc2()
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(chrono::high_resolution_clock::now() - start).count();
 	double new_time_taken = (time_taken * 1e-9);
-	ofstream myfile("Measure.txt"); // The name of the file
+	ofstream myfile("Measure.txt",ios_base::app); // The name of the file
 	myfile << "Time taken by function karatsubaRec is : " << fixed << new_time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
