@@ -11,8 +11,9 @@ public:
 	~Stack();
 	void MakeEmpty();
 	int isEmpty();
-	void Push(string item);
-	string Pop();
+	void Push(ItemType* item);
+	ItemType* Pop();
+	ItemType* Peak();
 
 private:
 	ItemType* top;

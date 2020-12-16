@@ -78,7 +78,7 @@ void karasubaHelper(ItemType* item, int n) {
 	while (item->getX().size() < n)
 		item->setX(item->getX().insert(0, "0"));
 	while (item->getY().size() < n)
-		item->getY().insert(0, "0");
+		item->setY(item->getY().insert(0, "0"));
 	string a = item->getX().substr(0, n / 2); //x's most significant
 	string b = item->getX().substr(n / 2, n - (n / 2)); //x's least significant
 	string c = item->getY().substr(0, n / 2); //y's most significant

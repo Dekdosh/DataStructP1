@@ -26,8 +26,8 @@ string karatsubaRec(string x, string y, int n) {
 
 	cout << "A: " << a << " B: " << b << " C: " << c << " D: " << d << endl;
 
-	// Recur until base case 123 456
-	string ac = karatsubaRec(a, c, n); // 4
+	// Recur until base case 1 23 4 56
+	string ac = karatsubaRec(a, c, n); // 1234
 	string bd = karatsubaRec(b, d, n); // 38
 	string tmp = karatsubaRec(add(a, b), add(c, d), n); //
 	string e = subtract(tmp, add(ac, bd)); //
@@ -49,7 +49,7 @@ string karatsubaRec(string x, string y, int n) {
 	// remove leading zeros
 	return result.erase(0, min(result.find_first_not_of('0'), result.size() - 1));
 }
-
+/*
 //assume strings a and b are numbers, then add them and returns the sum.
 string add(string a, string b) {
 	int length = max(a.size(), b.size());
@@ -111,8 +111,5 @@ string subtract(string a, string b) {
 	return result.erase(0, min(result.find_first_not_of('0'), result.size() - 1));
 }
 
-void main() {
-	string s1, s2;
-	cin >> s1 >> s2;
-	cout << karatsubaRec(s1, s2, 4) << endl;
-}
+*/
+

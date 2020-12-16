@@ -1,5 +1,4 @@
-#ifndef Q2_H_
-#define Q2_H_
+#pragma once
 #include <iostream>
 #include <string>
 #define max(a,b) ((a) > (b) ? (a) : (b))
@@ -13,5 +12,3 @@ using namespace std;
 string karatsubaRec(string x, string y, int n);
 string add(string lhs, string rhs);
 string subtract(string lhs, string rhs);
-
-#endif

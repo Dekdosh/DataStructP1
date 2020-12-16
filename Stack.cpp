@@ -11,25 +11,32 @@ void Stack::MakeEmpty() {
 	ItemType* tmp;
 	while (top != nullptr) {
 		tmp = top;
-		top = top->next;
+		top = top->getNext();
 		delete tmp;
 	}
 }
 
 int Stack::isEmpty() {
-	return top == nullptr
+	return top == nullptr;
 }
 
-void Stack::Push(string item) {
-	top = new ItemType(item, top);
+void Stack::Push(ItemType* item) {
+	item->setNext(top);
+	top = item;
 }
-string Stack::Pop() {
-	if (isEmpty) {
+
+ItemType* Stack::Pop() {
+	if (isEmpty()) {
 		return nullptr;
 	}
 	ItemType* tmp = top;
-	string item = top->data;
-	top = top->next;
-	delete tmp;
-	return item;
+	top = top->getNext();
+	return tmp;
+}
+
+ItemType* Stack::Peak() {
+	if (isEmpty()) {
+		return nullptr;
+	}
+	return top;
 }
