@@ -1,8 +1,8 @@
 #pragma once
 using namespace std;
 #include <iostream>
-#include <string> 
+#include "myString.cpp"
 #include <vector>
 
-string multiply(string x, string y, int nx, int ny);
-bool inputApproved(char* input, int size);
+myString multiply(myString& x, myString& y, int nx, int ny);
+bool inputApproved(myString& input, int size);
